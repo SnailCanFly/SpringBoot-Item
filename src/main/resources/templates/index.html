@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Spring Boot Security示例</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{css/app.css}" />
+<link rel="stylesheet" th:href="@{css/bootstrap-theme.min.css}"/> 
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+<script type="text/javascript" th:src="@{js/jquery-1.11.0.min.js}"></script>
+<script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">简单Spring Boot Security示例</h3>
+		</div>
+</div>
+<div id="mainWrapper">
+		<div class="login-container">
+			<div class="login-card">
+				<div class="login-form">
+					<!-- 表单提交到login -->
+					<form id="loginForm" th:action="@{/user/register}" method="post" class="form-horizontal">
+					
+						<div class="input-group input-sm">
+							<label class="input-group-addon"><i class="fa fa-user"></i></label>
+							<input type="text" class="form-control" id="loginName" name="name" placeholder="请输入用户名"/>
+						</div>
+						<div class="input-group input-sm">
+							<label class="input-group-addon"><i class="fa fa-lock"></i></label> 
+							<input type="text" class="form-control" id="password" name="gender" placeholder="性别"/>
+						</div>
+						<div class="input-group input-sm">
+							<label class="input-group-addon"><i class="fa fa-user"></i></label>
+							<input type="text" class="form-control" id="loginName" name="age" placeholder="年龄"/>
+						</div>
+						<div class="input-group input-sm">
+							<label class="input-group-addon"><i class="fa fa-user"></i></label>
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="phone"/>
+						</div>
+						<div class="input-group input-sm">
+							<label class="input-group-addon"><i class="fa fa-user"></i></label>
+							<input type="text" class="form-control" id="loginName" name="address" placeholder="address"/>
+						</div>
+						
+						<div class="form-actions">
+							<input id="loginBtn" type="submit"
+								class="btn btn-block btn-primary btn-default" value="注册"/>
+						</div>
+					</form>
+					<a href="/user/toupload"><button>去上传</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
